@@ -1,0 +1,9 @@
+.subckt chan_core C params:
++ Bs=0.4 Br=0.1 Hc=20       ; Core default magnetic parameters
++ A=25u1 Lm=19m8 Lg=0m7     ; Core default physical parameters
++ Rp=10k Cp=10p             ; Core default parallel loss and capacitance
+Lc C 0 Rser=0 n=1           ; force Rser=0 and n=1
++ Bs={Bs} Br={Br} Hc={Hc}
++ A={A} Lm={Lm} Lg={Lg}
++ Rpar={Rp} Cpar={Cp}
+.ends chan_core

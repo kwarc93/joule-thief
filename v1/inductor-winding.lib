@@ -1,0 +1,5 @@
+.subckt inductor_winding s f c params: n=1 L=1u Rs=1m Rp=100
+Lw s 1 {L} Rser={Rs} Rpar={Rp} ; leakage and resistance
+Ew 1 f c 0 {n}                 ; impose core volts/turn*turns onto winding
+Fw 0 c Ew {n}                  ; impose winding amperes*turns onto core
+.ends inductor_winding
